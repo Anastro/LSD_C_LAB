@@ -13,7 +13,6 @@ float *descente(float A[N][N], float B[N], int n)
 
 
   /******Implement the solution here******/
-  /***************************************/
   
   /****************************************/
 
