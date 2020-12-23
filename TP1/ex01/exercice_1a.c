@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define N 10
-
+       
+       int i;
+       int j;
+       float s;
 
 float *descente(float A[N][N], float B[N], int n)
 {
@@ -12,11 +15,17 @@ float *descente(float A[N][N], float B[N], int n)
   x = malloc(sizeof(float) * n);
 
 
-  /******Implement the solution here******/
-  
-  /****************************************/
-
+  for(i=1 ; i<n ; i++)
+ {
+	 s=0;
+	 for( j=0 ; j<= i-1 ; j++)
+	 {
+             s = s + A[i][j] * x[j];
+	 }
+	 x[i] = (B[i] - s) / A[i][i];
+ }
   return (x);
+
 }
 
 
